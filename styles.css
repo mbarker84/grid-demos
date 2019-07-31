@@ -1,0 +1,92 @@
+body {
+	font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+	margin: 0;
+	font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0 0 1rem 0;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 3rem 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 50rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	margin: 0 auto;
+}
+
+header {
+	background-color: black;
+	color: whiteSmoke;
+	padding: 3rem 0 0.5rem 0;
+}
+
+nav a {
+	color: yellow;
+	display: block;
+	padding: 1rem;
+	transition: color 200ms;
+	text-decoration-style: dashed;
+}
+
+nav a:hover,
+nav a:focus {
+	color: lightslategray;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 -1rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: repeat(4, 8rem);
+	grid-template-columns: repeat(4, 12rem);
+	gap: 1rem;
+	background-color: whiteSmoke;
+}
+
+.grid .item {
+	background-color: tomato;
+}
+
+.grid {
+	grid-template-rows: [a-start] 8rem 8rem [a-end] 8rem 8rem;
+	grid-template-columns: [a-start] 12rem 12rem 12rem [a-end] 12rem;
+}
+
+.grid--b {
+	grid-template-areas:
+		'. . . .'
+		'. . b b'
+		'. . b b'
+		'. . b b';
+}
+
+.grid--b .item--a {
+	grid-area: a;
+}
+
+.grid--b .item--b {
+	grid-area: b;
+	background-color: royalblue;
+}
+
+.grid--c {
+}
