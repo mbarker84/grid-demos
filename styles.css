@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Helvetica', Arial, Helvetica, sans-serif;
 	margin: 0;
@@ -23,6 +27,7 @@ ul {
 }
 
 .wrapper {
+	width: 100%;
 	max-width: 60rem;
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -36,11 +41,10 @@ header {
 }
 
 nav a {
-	color: yellow;
+	color: white;
 	display: block;
 	padding: 1rem;
 	transition: color 200ms;
-	text-decoration-style: dashed;
 }
 
 nav a:hover,
@@ -66,12 +70,9 @@ nav ul {
 	background-color: tomato;
 }
 
-.grid {
+.grid--b {
 	grid-template-rows: [a-start] 8rem 8rem [a-end] 8rem 8rem;
 	grid-template-columns: [a-start] 12rem 12rem 12rem [a-end] 12rem;
-}
-
-.grid--b {
 	grid-template-areas:
 		'. . . .'
 		'. . b b'
@@ -88,5 +89,17 @@ nav ul {
 	background-color: royalblue;
 }
 
-.grid--c {
+.grid--c .item--a {
+	grid-column: 1 / -1;
+	grid-row: 1 / 3;
+}
+
+.grid--d {
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+}
+
+.grid--d .item {
+	background-color: hotpink;
+	width: 100%;
 }
